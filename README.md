@@ -1,16 +1,72 @@
-# React + Vite
+# 🏏 BPL Dreams – Player Buying Demo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **React-based demo website** where users can buy cricket players with a given balance.  
+The app demonstrates dynamic balance management, player selection limits, and toast notifications.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- 🎯 **Buy Players** – Select and purchase up to **6 players**.  
+- 💰 **Balance Management** –  
+  - Adding a player reduces the balance.  
+  - Removing a player refunds the balance.  
+- ⚠️ **Toast Notifications** –  
+  - Shows **“Insufficient Balance”** when you don’t have enough funds.  
+  - Shows **“Max Players Reached”** when trying to select more than 6 players.  
+- ⚡ **Responsive UI** – Built with React & styled for a smooth experience.  
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** (Vite setup)  
+- **JavaScript (ES6+)**  
+- **CSS Modules / Tailwind (depending on styling used)**  
+- **Toast Library** (e.g., React-Toastify or custom implementation)  
+
+---
+
+## 📂 Project Structure
+
+```
+bpl-dreams/
+│── public/ # Static assets
+│── src/
+│ ├── components/ # Reusable components (PlayerCard, Toast, etc.)
+│ ├── pages/ # Page views
+│ ├── App.jsx # Root component
+│ ├── main.jsx # React entry file
+│ └── styles/ # CSS or Tailwind styles
+│── index.html # App mount point
+│── package.json # Dependencies & scripts
+│── vite.config.js # Vite configuration
+└── README.md # Project documentation
+```
+
+---
+
+## ⚡ Getting Started
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/bpl-dreams.git
+cd bpl-dreams
+```
+
+# 📸 Demo Flow
+
+1. Start with a set balance.
+
+1. Select players → Balance decreases.
+
+1. Try buying with low balance → “Insufficient Balance” toast.
+
+1. Try selecting more than 6 players → “Max Players Reached” toast.
+
+1. Remove a player → Balance is restored.
+
+
+## 🌐 Live Demo
+
+👉 [Click here to try the app](https://bpl-dream-react.pages.dev/)  
