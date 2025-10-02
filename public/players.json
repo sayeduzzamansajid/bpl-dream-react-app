@@ -8,7 +8,7 @@
         "rating": 9.8,
         "batting_style": "Left-hand bat",
         "bowling_style": "Slow left-arm orthodox",
-        "price": "250,000"
+        "price": "550,000"
     },
     {
         "id": 2,
@@ -52,7 +52,7 @@
         "rating": 9.2,
         "batting_style": "Left-hand bat",
         "bowling_style": "Right-arm off-break",
-        "price": "210,000"
+        "price": "410,000"
     },
     {
         "id": 6,
@@ -74,7 +74,7 @@
         "rating": 9.0,
         "batting_style": "Left-hand bat",
         "bowling_style": "Right-arm off-break",
-        "price": "190,000"
+        "price": "290,000"
     },
     {
         "id": 8,

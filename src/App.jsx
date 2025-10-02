@@ -1,5 +1,6 @@
 import './App.css'
 import './index.css'
+import { ToastContainer} from 'react-toastify'
 import AvailablePlayers from './Components/Available Players/AvailablePlayers'
 import SelectedPlayers from './Components/Selected Players/SelectedPlayers'
 import NavBar from './Components/Nav Bar/NavBar'
@@ -18,7 +19,7 @@ function App() {
 
   const [playerSelected, setPlayerSelected] = useState([])
   const [toggle, setToggle] = useState(true);
-  const [availableBalance, setAvailableBalence] = useState(600000);
+  const [availableBalance, setAvailableBalence] = useState(1000000);
 
 
   function removePlayer(ply){
@@ -55,6 +56,7 @@ function App() {
           </Suspense> :
           <SelectedPlayers playerSelected={playerSelected} removePlayer={removePlayer}></SelectedPlayers>
       }
+      <ToastContainer />
 
 
 

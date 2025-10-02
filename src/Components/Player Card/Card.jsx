@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import profile from '../../assets/Group.png'
 import flag from '../../assets/flag.png'
+import { toast } from 'react-toastify';
 
 
 const Card = ({ player, setAvailableBalence, availableBalance, playerSelected, setPlayerSelected }) => {
@@ -42,17 +43,24 @@ const Card = ({ player, setAvailableBalence, availableBalance, playerSelected, s
                 <div className='flex justify-between items-center mt-4'>
                     <p className='font-bold'>Price: ${player.price}</p>
                     <button onClick={() => {
-                        const playerPrice =player.price.split(",").join("");
-                        if (availableBalance >= playerPrice){
+                        const playerPrice = player.price.split(",").join("");
+                        if (availableBalance >= playerPrice) {
                             setIsSelected(true);
-                            const newBalence = availableBalance-playerPrice
+                            const newBalence = availableBalance - playerPrice
                             setAvailableBalence(newBalence);
-                            setPlayerSelected([...playerSelected, player])
+                            if(playerSelected.length == 6){
+                                toast("max player reached!")
+                                setIsSelected(false)
+                                return
+                            }
+                            
 
                         }
-                        else{
-                            alert("Insuffecient Balence")
+                        else {
+                            toast("Insuffecient Balence")
+                            return
                         }
+                        setPlayerSelected([...playerSelected, player])
 
 
                     }
